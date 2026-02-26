@@ -6,6 +6,9 @@ import com.google.gson.JsonObject;
 import com.ravenbill.vanilla.ApiClient;
 import com.ravenbill.vanilla.Config;
 
+// NOTE: Templates feature is not yet implemented in Vanilla Esign.
+// This sample demonstrates the planned API design and may change.
+
 public class UseTemplates {
 
     public static void main(String[] args) {

@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+// NOTE: Bulk Send feature is not yet implemented in Vanilla Esign.
+// This sample demonstrates the planned API design and may change.
+
 public class BulkSend {
 
     public static void main(String[] args) throws IOException {

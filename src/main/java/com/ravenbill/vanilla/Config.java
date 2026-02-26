@@ -2,7 +2,7 @@ package com.ravenbill.vanilla;
 
 public final class Config {
 
-    public static final String API_URL = env("VANILLA_API_URL", "http://localhost:4000");
+    public static final String API_URL = env("VANILLA_API_URL", "https://demo.ravenbill.com");
     public static final String EMAIL = requireEnv("VANILLA_EMAIL");
     public static final String PASSWORD = requireEnv("VANILLA_PASSWORD");
     public static final String ACCOUNT_ID = requireEnv("VANILLA_ACCOUNT_ID");
