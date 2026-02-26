@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+sourceSets {
+    samples {
+        java {
+            srcDir 'samples'
+        }
+        compileClasspath += main.output
+        runtimeClasspath += main.output
+    }
+}
+
+configurations {
+    samplesImplementation.extendsFrom implementation
+    samplesRuntimeOnly.extendsFrom runtimeOnly
+}
+
+application {
+    mainClass = project.hasProperty('mainClass') ? project.property('mainClass') : 'samples.CreateAndSendEnvelope'
+}
+
+run {
+    classpath = sourceSets.samples.runtimeClasspath
+}
